@@ -100,6 +100,29 @@ a {
   text-decoration: none;
 }
 
+nav
+{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-content: space-between;
+}
+
+nav ul
+{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-content: space-around;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+nav ul li 
+{
+  padding: 0.2rem 0.5rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
