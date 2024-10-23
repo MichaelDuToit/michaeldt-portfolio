@@ -1,6 +1,8 @@
 import Head from 'next/head'
+import { getProjects } from '@/configuration/mdx-utils'
+import ProjectCard from '@/components/projectCard';
 
-export default function Home() {
+export default function Home({ projects }) {
   return (
     <>
       <Head>
@@ -9,9 +11,76 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        Home
-      </main>
+      <div>
+        <div class="splash">
+          <h2>Michael du Toit</h2>
+          <p>&lt;</p>
+        </div>
+        <main>
+          <section>
+            <h3>Hi! I'm Michael!</h3>
+            <p>I am a Full Stack Developer who enjoys working across all technologies and platforms. Currently located in Wellington, New Zealand.<br/>         
+            </p>
+          </section>
+          <section>
+            <h3>My Work</h3>
+            <ul>
+            {
+                projects.sort((a, b) => orderProjects(a, b)).map((project) => (
+                    <li key={project.page}>
+                      <ProjectCard 
+                        url={`/projects/${project.page}`} 
+                        title={project.title}
+                        image=""
+                        />
+                    </li>
+                ))
+            }
+            </ul>
+          </section>          
+        </main>
+      </div>
     </>
   )
+}
+
+
+export function getStaticProps()
+{
+    const projects = getProjects();
+
+    return { props: { projects }}
+}
+
+export function orderProjects(a, b)
+{
+  let firstObjSortOrder = a.sortOrder != null ? a.sortOrder : 1000;
+  let secondObjSortOrder = b.sortOrder != null ? b.sortOrder : 1000;
+
+  // first we order by the SortOrder meta data.
+  if(firstObjSortOrder < secondObjSortOrder)
+  {
+    return -1;
+  }
+
+  if(firstObjSortOrder > secondObjSortOrder)
+  {
+    return 1;
+  }
+
+  // if they have the same SortOrder, then sort alphabetically by the title
+  let firstObjTitle = a.title != null ? a.title.toUpperCase() : "";
+  let secondObjTitle = b.title != null ? b.title.toUpperCase() : "";
+
+  if(firstObjTitle < secondObjTitle)
+  {
+    return -1;
+  }
+
+  if(firstObjTitle > secondObjTitle)
+  {
+    return 1;
+  }
+
+  return 0;
 }
