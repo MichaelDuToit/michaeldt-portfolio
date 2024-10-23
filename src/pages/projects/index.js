@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { getProjects } from '../../configuration/mdx-utils'
 import { GeneratePageTitle } from "@/configuration/globals";
-import Link from 'next/link';
+import ProjectCard from '@/components/projectCard';
 
 export default function Projects({ projects }) {
   return (
@@ -15,9 +15,11 @@ export default function Projects({ projects }) {
         {
             projects.sort((a, b) => orderProjects(a, b)).map((project) => (
                 <li key={project.page}>
-                  <Link href={`/projects/project/${project.page}`}>
-                    {project.title}
-                  </Link>
+                  <ProjectCard 
+                    url={`/projects/${project.page}`} 
+                    title={project.title}
+                    image=""
+                    />
                 </li>
             ))
         }
