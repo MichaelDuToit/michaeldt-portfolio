@@ -13,17 +13,17 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <div className="splash">
-          <h2>Michael du Toit</h2>
-          <p>&lt;</p>
+        <div className="landingSplash">
+          <h2 className='header'>Michael du Toit</h2>
+          <p className='downArrow'>&gt;</p>
         </div>
         <main>
-          <section>
+          <section className='viewSection'>
             <h3>Hi! I'm Michael!</h3>
             <p>I am a Full Stack Developer who enjoys working across all technologies and platforms. Currently located in Wellington, New Zealand.<br/>         
             </p>
           </section>
-          <section>
+          <section className='viewSection'>
             <h3 className='center-text'>Featured Projects:</h3>
             <ul className="projectCardContainer">
             {
