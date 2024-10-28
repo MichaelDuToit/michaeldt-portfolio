@@ -5,9 +5,13 @@ import 'react-dom';
 export default function ProjectCard({ url, image, title })
 {
     return (
-        <Link href={url} title={title}>
-          <img src={image} />
-          <h4>{title}</h4>
-        </Link>
+        <li className="projectCard">
+          <Link href={url} title={title}>
+            <img src={image} />
+            <div className='overlay'>
+            <h4>{title}</h4>
+            </div>
+          </Link>
+        </li>
     )
 }

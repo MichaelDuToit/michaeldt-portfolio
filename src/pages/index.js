@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import { getProjects } from '@/configuration/mdx-utils'
+import Head from 'next/head';
+import Link from 'next/link';
+import { getProjects } from '@/configuration/mdx-utils';
 import ProjectCard from '@/components/projectCard';
 
 export default function Home({ projects }) {
@@ -12,7 +13,7 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <div class="splash">
+        <div className="splash">
           <h2>Michael du Toit</h2>
           <p>&lt;</p>
         </div>
@@ -23,20 +24,19 @@ export default function Home({ projects }) {
             </p>
           </section>
           <section>
-            <h3>My Work</h3>
-            <ul>
+            <h3 className='center-text'>Featured Projects:</h3>
+            <ul className="projectCardContainer">
             {
                 projects.sort((a, b) => orderProjects(a, b)).map((project) => (
-                    <li key={project.page}>
-                      <ProjectCard 
+                      <ProjectCard key={project.page}
                         url={`/projects/${project.page}`} 
                         title={project.title}
                         image=""
                         />
-                    </li>
                 ))
             }
             </ul>
+            <Link href="/projects" className='center-text'>See More....</Link>
           </section>          
         </main>
       </div>

@@ -123,6 +123,68 @@ nav ul li
   padding: 0.2rem 0.5rem;
 }
 
+.center-text
+{
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.projectCardContainer
+{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.projectCard
+{
+  display: flex;
+  list-style-type: none;
+  min-width: 15rem;
+  flex-grow: 1;
+  min-height: 10rem;
+  position: relative;
+  transition: all .3s linear 0s;
+}
+
+.projectCard a 
+{
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectCard h4
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  top: 45%;
+}
+
+.projectCard a h4::after
+{
+ background-color: #fff;
+ bottom: -7px;
+ content: "";
+ width: 0;
+ height: 0.2rem;
+ left:0;
+ position: absolute;
+ transition: width .2s;
+}
+
+.projectCard a:hover h4::after
+{
+  width: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
