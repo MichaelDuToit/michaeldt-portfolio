@@ -13,8 +13,9 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <div className="landingSplash">
+        <div className="landingSplash splashAnimation">
           <h2 className='header'>Michael du Toit</h2>
+          <h3>Full Stack Developer</h3>
           <p className='downArrow'>&gt;</p>
         </div>
         <main>

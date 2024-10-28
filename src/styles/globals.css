@@ -213,15 +213,6 @@ nav
   text-align: center;
   width: 100%;
 
-  -webkit-animation: backgroundAnimation 6s ease-in-out infinite;
-  animation: backgroundAnimation 6s ease-in-out infinite;
-  animation-duration: 6s;
-  background: #1f66e5;
-  background: linear-gradient(-45deg,#1f66e5,#1fc9e5,#e51fc9,#1fc9e5,#1f66e5);
-  background-size: auto;
-  background-size: 450% 100%;
-  position: relative;
-
   .header
   {
     font-size: 4rem;
@@ -248,6 +239,18 @@ nav
   display: flex;
   flex-direction: column;
   margin: 10%;
+}
+
+.splashAnimation
+{
+  -webkit-animation: backgroundAnimation 6s ease-in-out infinite;
+  animation: backgroundAnimation 6s ease-in-out infinite;
+  animation-duration: 6s;
+  background: #1f66e5;
+  background: linear-gradient(-45deg,#1f66e5,#1fc9e5,#e51fc9,#1fc9e5,#1f66e5);
+  background-size: auto;
+  background-size: 450% 100%;
+  position: relative;
 }
 
 @keyframes backgroundAnimation {
