@@ -127,7 +127,7 @@ nav ul li
 {
   display: flex;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
 }
 
@@ -148,41 +148,53 @@ nav ul li
   min-height: 10rem;
   position: relative;
   transition: all .3s linear 0s;
+
+  a {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overlayRoot
+  {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+  }
 }
 
-.projectCard a 
+.borderHoverEffectParent
 {
-  display: flex;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
-
-.projectCard h4
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  position: relative;
-  top: 45%;
-}
-
-.projectCard a h4::after
-{
- background-color: #fff;
- bottom: -7px;
- content: "";
- width: 0;
- height: 0.2rem;
- left:0;
- position: absolute;
- transition: width .2s;
-}
-
-.projectCard a:hover h4::after
-{
-  width: 100%;
+  .borderHoverEffect::after
+  {
+    background-color: #fff;
+    bottom: -7px;
+    content: "";
+    width: 0;
+    height: 0.2rem;
+    left: 0;
+    position: absolute;
+    transition: width .2s;
+  }
+  
+  &:hover .borderHoverEffect::after
+  {
+    width: 100%;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

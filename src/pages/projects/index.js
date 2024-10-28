@@ -11,16 +11,14 @@ export default function Projects({ projects }) {
         <meta name="description" content="Projects created by Michael du Toit" />
       </Head>
       <main>
-        <ul>
+        <ul className="projectCardContainer">
         {
             projects.sort((a, b) => orderProjects(a, b)).map((project) => (
-                <li key={project.page}>
-                  <ProjectCard 
-                    url={`/projects/${project.page}`} 
-                    title={project.title}
-                    image=""
-                    />
-                </li>
+              <ProjectCard key={project.page}
+                url={`/projects/${project.page}`} 
+                title={project.title}
+                image=""
+              />
             ))
         }
         </ul>
