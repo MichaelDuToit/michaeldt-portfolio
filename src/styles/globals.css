@@ -155,9 +155,9 @@ nav
   list-style-type: none;
   min-width: 15rem;
   flex-grow: 1;
-  min-height: 10rem;
+  min-height: 15rem;
   position: relative;
-  transition: all .3s linear 0s;
+  transition: all .3s ease-in-out;
 
   a 
   {
@@ -186,6 +186,24 @@ nav
     align-items: center;
     text-decoration: none;
     position: relative;
+  }
+
+  img 
+  {
+    position: absolute;
+    top:0;
+    left: 0;
+    filter: blur(0);
+    transition: .3s ease-in-out;
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+  }
+
+  &:hover img
+  {
+    filter: blur(5px);
   }
 }
 
@@ -269,6 +287,16 @@ nav
   background-size: auto;
   background-size: 450% 100%;
   position: relative;
+}
+
+.mb-2
+{
+  margin-bottom: 2rem;
+}
+
+.mt-2
+{
+  margin-top: 2rem;
 }
 
 @keyframes backgroundAnimation {

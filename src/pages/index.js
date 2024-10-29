@@ -27,7 +27,7 @@ export default function Home({ projects }) {
             </p>
           </section>
           <section className='viewSection'>
-            <h3 className='center-text'>Featured Projects:</h3>
+            <h3 className='center-text mb-2'>Featured Projects:</h3>
             <ul className="projectCardContainer">
             {
                 projects.sort((a, b) => orderProjects(a, b)).map((project) => (
@@ -39,7 +39,7 @@ export default function Home({ projects }) {
                 ))
             }
             </ul>
-            <Link href="/projects" className='center-text'>See More....</Link>
+            <Link href="/projects" className='center-text mt-2'>See More....</Link>
           </section>          
         </main>
       </div>
