@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { getProjects } from '@/configuration/mdx-utils';
 import ProjectCard from '@/components/projectCard';
 
+Home.useLandingPageNavigationBarStyle = true;
+
 export default function Home({ projects }) {
   return (
     <>
@@ -44,7 +46,6 @@ export default function Home({ projects }) {
     </>
   )
 }
-
 
 export function getStaticProps()
 {

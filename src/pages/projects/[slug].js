@@ -10,7 +10,7 @@ export default function Project({ content })
             <title>{ GeneratePageTitle(content.title) }</title>
             <meta name="description" content={`${content.description}`} />
             </Head>
-            <div>
+            <div className="projectPageContainer">
                 <h3>{content.title}</h3>
                 <article>{content.content}</article>
             </div>

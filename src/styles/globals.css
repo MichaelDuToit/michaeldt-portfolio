@@ -102,7 +102,8 @@ nav
   right: 0;
   z-index: 100;
 
-  ul {
+  ul 
+  {
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -110,14 +111,24 @@ nav
     text-decoration: none;
     list-style-type: none;
 
-    li {
+    li 
+    {
       margin: 1rem;
       
-      a {
+      a 
+      {
         font-weight: bold;
         font-size: 1.15rem;
       }
     }
+  }
+
+  .navigationTitle
+  {
+    display: block;
+    box-sizing: border-box;
+    margin: 1rem;
+    white-space: nowrap;
   }
 }
 
@@ -148,7 +159,8 @@ nav
   position: relative;
   transition: all .3s linear 0s;
 
-  a {
+  a 
+  {
     display: flex;
     cursor: pointer;
     justify-content: center;
@@ -167,7 +179,8 @@ nav
     align-items: center;
   }
 
-  h4 {
+  h4 
+  {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,6 +188,12 @@ nav
     position: relative;
   }
 }
+
+.projectPageContainer
+{
+  margin: 2rem;
+}
+
 
 .borderHoverEffectParent
 {
