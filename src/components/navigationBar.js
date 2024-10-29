@@ -4,8 +4,6 @@ export default function NavigationBar({ useLandingPageNavigationBarStyle })
 {
     const useSplashAnimationCSS = useLandingPageNavigationBarStyle ? "" : "splashAnimation";
 
-    console.warn(useLandingPageNavigationBarStyle);
-
     return (
         <nav className={useSplashAnimationCSS}>
             <NavigationTitle hideTitle={useLandingPageNavigationBarStyle} />
