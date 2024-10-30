@@ -2,19 +2,31 @@ import Link from 'next/link';
 import 'react';
 import 'react-dom';
 
-export default function ProjectCard({ url, image, title })
+export default function ProjectCard({ project })
 {
-  // TODO: using a placeholder image - swap out for actual image
     return (
         <li className="projectCard borderHoverEffectParent">
-          <Link href={url} title={title}>
+          <Link href={`/projects/${project.page}`} title={project.title}>
             <div className='overlayRoot'>
-              <img src='https://images.pexels.com/photos/5483069/pexels-photo-5483069.jpeg' />
+              <ProjectImage project={project} />
               <div className='overlayContent'>
-                <h4 className='borderHoverEffect'>{title}</h4>
+                <h4 className='borderHoverEffect'>{project.title}</h4>
               </div>
             </div>
           </Link>
         </li>
     )
+}
+
+export function ProjectImage({project})
+{
+  // TODO: save local fallback image.
+  const fallbackImage = "https://images.pexels.com/photos/5483069/pexels-photo-5483069.jpeg";
+  const imagePath = project.image != null || project.image != undefined ? `/images/${project.image}` : fallbackImage;
+
+  return (
+    <div className='img' style={{backgroundImage:`url(${imagePath})`}} />
+  );
+
+  
 }

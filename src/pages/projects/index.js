@@ -15,9 +15,7 @@ export default function Projects({ projects }) {
         {
             projects.sort((a, b) => orderProjects(a, b)).map((project) => (
               <ProjectCard key={project.page}
-                url={`/projects/${project.page}`} 
-                title={project.title}
-                image=""
+                project={project}
               />
             ))
         }
