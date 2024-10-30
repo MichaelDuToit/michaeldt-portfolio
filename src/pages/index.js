@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { getProjects } from '@/configuration/mdx-utils';
+import { getProjects } from '@/configuration/markdown-utils';
 import ProjectCard from '@/components/projectCard';
 
 Home.useLandingPageNavigationBarStyle = true;

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { getProjects } from '@/configuration/mdx-utils'
+import { getProjects } from '@/configuration/markdown-utils'
 import { GeneratePageTitle } from "@/configuration/globals";
 import ProjectCard from '@/components/projectCard';
 

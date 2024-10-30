@@ -1,5 +1,5 @@
 import { GeneratePageTitle } from "@/configuration/globals";
-import { getProjectData, projectsContentPaths } from "@/configuration/mdx-utils"
+import { getProjectData, projectsContentPaths } from "@/configuration/markdown-utils"
 import Head from 'next/head'
 
 export default function Project({ content })
