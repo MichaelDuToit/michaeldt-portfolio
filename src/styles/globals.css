@@ -207,7 +207,17 @@ nav
   &:hover .img
   {
     filter: blur(5px);
+    opacity: 0.3;
   }
+
+  &:hover .overlayRoot
+  {
+    & h4
+    {
+      opacity: 1;
+    }
+  }
+
 }
 
 .borderHoverEffectParent
