@@ -218,6 +218,17 @@ nav
   margin: 10%;
 }
 
+.projectContent
+{
+  a 
+  {
+    color: #1f66e5;
+  }
+  p {
+    padding: 0.25rem 0rem;
+  }
+}
+
 .splashAnimation
 {
   -webkit-animation: backgroundAnimation 6s ease-in-out infinite;

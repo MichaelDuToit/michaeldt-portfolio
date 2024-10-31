@@ -1,8 +1,10 @@
 import { GeneratePageTitle } from "@/configuration/globals";
 import { getProjectData, projectsContentPaths } from "@/configuration/markdown-utils"
+import { MDXRemote } from "next-mdx-remote";
+import {serialize} from 'next-mdx-remote/serialize';
 import Head from 'next/head'
 
-export default function Project({ content })
+export default function Project({ content, bodyContent })
 {
     return (
         <>
@@ -10,20 +12,21 @@ export default function Project({ content })
             <title>{ GeneratePageTitle(content.title) }</title>
             <meta name="description" content={`${content.description}`} />
             </Head>
-            <div className="viewSection">
+            <div className="projectContent viewSection">
                 <h3>{content.title}</h3>
-                <article>{content.content}</article>
+                <MDXRemote {...bodyContent} />
             </div>
         </>
     )
 }
 
-export function getStaticProps(source)
+export async function getStaticProps(source)
 {
     const content = getProjectData(source.params.slug);
-    
+    const mdxSource = await serialize(content.content);    
+
     return {
-        props: { content }
+        props: { content, bodyContent: mdxSource }
     }
 }
 
