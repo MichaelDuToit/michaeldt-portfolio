@@ -58,33 +58,31 @@ export function getStaticProps()
 
 export function orderProjects(a, b)
 {
-  let firstObjSortOrder = a.sortOrder != null ? a.sortOrder : 1000;
-  let secondObjSortOrder = b.sortOrder != null ? b.sortOrder : 1000;
+  function getComparer(a, b)
+  {
+    if(a < b)
+    {
+      return -1;
+    }
+    
+    if(a > b)
+    {
+      return 1;
+    }    
+
+    return 0;
+  }
 
   // first we order by the SortOrder meta data.
-  if(firstObjSortOrder < secondObjSortOrder)
-  {
-    return -1;
+  let index = getComparer(a.sortOrder, b.sortOrder);
+
+  // if we didn't have a duplication then return
+  if(index != 0)
+  { 
+    return index;
   }
 
-  if(firstObjSortOrder > secondObjSortOrder)
-  {
-    return 1;
-  }
+  // otherwise they have the same SortOrder, so sort alphabetically by the title instead.
+  return getComparer(a.title.toUpperCase(), b.title.toUpperCase())
 
-  // if they have the same SortOrder, then sort alphabetically by the title
-  let firstObjTitle = a.title != null ? a.title.toUpperCase() : "";
-  let secondObjTitle = b.title != null ? b.title.toUpperCase() : "";
-
-  if(firstObjTitle < secondObjTitle)
-  {
-    return -1;
-  }
-
-  if(firstObjTitle > secondObjTitle)
-  {
-    return 1;
-  }
-
-  return 0;
 }
