@@ -1,3 +1,4 @@
+import Carousel from "@/components/carousel";
 import { GeneratePageTitle } from "@/configuration/globals";
 import { getProjectData, projectsContentPaths } from "@/configuration/markdown-utils"
 import { MDXRemote } from "next-mdx-remote";
@@ -13,6 +14,7 @@ export default function Project({ content, bodyContent })
             <meta name="description" content={`${content.description}`} />
             </Head>
             <div className="projectContent viewSection">
+                <Carousel images={[content.image]} />
                 <h3>{content.title}</h3>
                 <MDXRemote {...bodyContent} />
             </div>
