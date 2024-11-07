@@ -104,10 +104,12 @@ nav
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-delay: 0s;
   }
 
   h4 
   {
+    visibility: collapse;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,6 +117,10 @@ nav
     position: relative;
     text-shadow: 0px 0px 0.75rem #000;
     color: white;
+    &.borderHoverEffect::after
+    {
+      transition-delay: 0.15s;
+    }
   }
 
   .img 
@@ -143,6 +149,7 @@ nav
     & h4
     {
       opacity: 1;
+      visibility: visible;
     }
   }
 
