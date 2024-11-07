@@ -227,6 +227,7 @@ nav
 
 .projectContent
 {
+  margin-top: 2%;
   a 
   {
     color: #1f66e5;
@@ -269,13 +270,15 @@ nav
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     overflow-x: scroll;
     img 
     {
-      max-height: 15rem;
+      max-height: 20rem;
+      max-width: 33vw;
       cursor: pointer;
+      padding: 0.25rem;
     }
   }
 

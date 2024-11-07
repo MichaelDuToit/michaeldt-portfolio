@@ -17,8 +17,8 @@ export default function Carousel({ images })
     function changeSlide(direction)
     {
         let nextImageIndex = modalImageIndex - direction;
-        const maxImageIndex = [imgArray.length - 1];
-        
+        const maxImageIndex = imgArray.length - 1;
+
         if(nextImageIndex < 0)
         {
             nextImageIndex = maxImageIndex;
@@ -28,19 +28,19 @@ export default function Carousel({ images })
             nextImageIndex = 0
         }
 
-        setModalImageIndex(nextImageIndex);     
+        setImage(nextImageIndex);     
     }
     
-    function openImage(imgIndex)
+    function setImage(imgIndex)
     {
         setModalImageIndex(imgIndex);
         setSelectedModalImage(`/images/${imgArray[imgIndex].url}`);
-        setModalVisbility(!modalVisible);
+        setModalVisbility(true);
     }
 
     function closeModal()
     {
-        setModalVisbility(!modalVisible);
+        setModalVisbility(false);
     }
 
     return (
@@ -48,7 +48,7 @@ export default function Carousel({ images })
             <div className="display">
                 {
                     imgArray.map(i => (
-                        <img key={i.index} src={`/images/${i.url}`} onClick={() => openImage(i.index)}/>
+                        <img key={i.index} src={`/images/${i.url}`} onClick={() => setImage(i.index)}/>
                     ))
                 }
             </div>

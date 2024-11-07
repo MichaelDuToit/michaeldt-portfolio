@@ -14,7 +14,7 @@ export default function Project({ content, bodyContent })
             <meta name="description" content={`${content.description}`} />
             </Head>
             <div className="projectContent viewSection">
-                <Carousel images={[content.image]} />
+                <Carousel images={content.images} />
                 <h3>{content.title}</h3>
                 <MDXRemote {...bodyContent} />
             </div>
