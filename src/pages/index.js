@@ -18,7 +18,10 @@ export default function Home({ projects }) {
         <div className="landingSplash splashAnimation">
           <h2 className='header'>Michael du Toit</h2>
           <h3>Full Stack Developer</h3>
-          <p className='downArrow'>&#10095;</p>
+          <div className="arrowContainer">
+            <p className='downArrow'>&#10095;</p>
+            <p className='downArrow'>&#10095;</p>
+          </div>
         </div>
         <main>
           <section className='viewSection'>

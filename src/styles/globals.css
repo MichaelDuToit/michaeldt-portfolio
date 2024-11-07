@@ -188,11 +188,11 @@ nav
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 98%;
-  height: 98vh;
+  height: 99%;
+  height: 99vh;
   justify-content: center;
-  min-height: 98%;
-  min-height: 98vh;
+  min-height: 99%;
+  min-height: 99vh;
   min-width: 100%;
   text-align: center;
   width: 100%;
@@ -202,19 +202,24 @@ nav
     font-size: 4rem;
   }
 
+  .arrowContainer
+  {
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    z-index: 20;
+    bottom: 11vh;
+  }
+
   .downArrow
   {
     -webkit-animation: arrowSlider 3s 1s infinite;
     animation: arrowSlider 3s 1s infinite;
-    bottom: 10vh;
     font-size: 6rem;
     font-weight: 700;
-    left: 50%;
-    position: absolute;
-    right: 50%;
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-    z-index: 20;
+    height: 1.75rem;
   }
 }
 
