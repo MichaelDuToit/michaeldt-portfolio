@@ -43,9 +43,53 @@ export function getProjectData(project)
 
   data = matter(ReadProjectFile(fileName))
 
-  return {
-    project,
-    content: data.content,
-    ...data.data,
+  return Project(project, data);
+}
+
+export function Project(key, data)
+{
+  // Create a schema object with default values
+  let schema = {
+    key: key,
+    title: "",
+    description: "",
+    tools: [],
+    sortOrder: 1000,
+    images: [],
+    content: ""
   }
+
+  if(data.data.title != null)
+  {
+    schema.title = data.data.title;
+  }
+
+  if(data.data.description != null)
+  {
+    schema.description = data.data.description;
+  }
+
+  if(data.data.sortOrder != null)
+  {
+    schema.sortOrder = data.data.sortOrder;
+  }
+
+  if(data.data.images != null)
+  {
+    if(data.data.images instanceof Array)
+    {
+      schema.images = data.data.images.map(i => i.trim());
+    }
+    else
+    {
+      schema.images = data.data.images.split(",").map(i => i.trim());
+    }
+  }
+
+  if(data.content != null)
+  {
+    schema.content = data.content;
+  }
+
+  return schema;
 }

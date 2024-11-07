@@ -34,23 +34,20 @@ export function getStaticProps()
 
 export function orderProjects(a, b)
 {
-  let firstObjSortOrder = a.sortOrder != null ? a.sortOrder : 1000;
-  let secondObjSortOrder = b.sortOrder != null ? b.sortOrder : 1000;
-
   // first we order by the SortOrder meta data.
-  if(firstObjSortOrder < secondObjSortOrder)
+  if(a.sortOrder < b.sortOrder)
   {
     return -1;
   }
 
-  if(firstObjSortOrder > secondObjSortOrder)
+  if(a.sortOrder > b.sortOrder)
   {
     return 1;
   }
 
   // if they have the same SortOrder, then sort alphabetically by the title
-  let firstObjTitle = a.title != null ? a.title.toUpperCase() : "";
-  let secondObjTitle = b.title != null ? b.title.toUpperCase() : "";
+  let firstObjTitle = a.title.toUpperCase();
+  let secondObjTitle = b.title.toUpperCase();
 
   if(firstObjTitle < secondObjTitle)
   {
