@@ -355,6 +355,39 @@ nav
   }
 }
 
+.carousel
+{
+  display: flex;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    max-height: 22rem;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  a
+  {
+    color: white;
+    font-size: 4rem;
+    cursor: pointer;
+    align-self: center;
+    min-height: 100%;
+  }
+
+  .btnHidden
+  {
+    visibility: collapse !important;
+  }
+
+}
+
 @keyframes backgroundAnimation {
   0%,
   to {
