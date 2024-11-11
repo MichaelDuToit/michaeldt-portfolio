@@ -51,7 +51,9 @@ export default function Home({ projects }) {
 
 export function getStaticProps()
 {
-    const projects = getProjects();
+    let projects = getProjects();
+    // order the projects and then limit to top 4 for the home page
+    projects = projects.sort((a, b) => orderProjects(a, b)).slice(0, 4);
 
     return { props: { projects }}
 }
