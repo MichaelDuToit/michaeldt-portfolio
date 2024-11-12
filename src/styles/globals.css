@@ -32,6 +32,7 @@ nav
   right: 0;
   z-index: 100;
   color: white;
+  align-items: center;
 
   ul 
   {
@@ -59,7 +60,7 @@ nav
   {
     display: block;
     box-sizing: border-box;
-    margin: 1rem;
+    margin-left: 1rem;
     white-space: nowrap;
   }
 }
