@@ -1,0 +1,38 @@
+---
+title: Digital Attendance System (DAS)
+description: 
+tools: C#, Angular, Android-Java
+sortOrder: 50
+images: [ das_product_web_session_done.png,das_product_web_session_copy.png,das_product_web_sessions.png,das_product_web_studentPortal.png]
+
+
+---
+
+**Project Overview**
+<br/>
+The Digital Attendance System (DAS) was the final year project that I undertook with 3 other students while completing our Bachelor of Information Technology at the Wellington Institute of Technology.
+The Digital Attendance System was a convergence project where my team converged existing technology capabilities with business processes to form a digital solution to improve and refine the business process.
+<br/>
+The root issue tackled by the project was to address the inconsistent approaches of collecting student attendance at class sessions, attendance was an important metric not just to the School but also for International Student's Visa requirements.
+The inconsistent approaches between Staff Members were often time consuming and occasionally error-prone both to collect and input into the Institute's central attendance system.
+
+With information from the client, the team devised a digital solution for recording attendance at classes in a less tedious way for staff. Attendance is collected through an Android application or online web portal with an easy-to-use export feature which would format the collected data into a CSV format that is compatible with the import feature of the institute's current attendance system.<br/>
+
+As the system would be getting used by a wide range of Staff Members, including non-technical Staff, it had to be friendly and intuitive to use.
+<pre><br/></pre>
+**Project Solution**
+<br/>
+In designing the Digital Attendance System, the team decided to break down the overall System into four Sub-Systems, which would provide the System with a degree of modularity and a separation of concerns.
+
+The four Sub-Systems that compose the Digital Attendance System are: a Headless REST API Server, an Android Mobile Application, a Staff Web App, and a Student Web Portal. These four Sub-Systems interact with each other to bring full functionality to the overall System. The User Interfaces were designed to be intuitive and simplistic to use for the users.
+The structure of the four Sub-Systems are:<br/>
+- _Headless REST API Server:_ This was built with C# / .NET Core and runs on a Linux machine. The Headless API Server is the backbone of the System and maintains the data of the system. The Server’s API Endpoints were protected with JSON Web Tokens. Data was stored in a SQL database.
+- _Android Mobile Application:_ The Android Mobile Application was built using Java and utilises Near Field Communication (NFC) technologies to enable students to record their attendance at class sessions by scanning their Student ID card against a compatible Android device. The Android Application was developed to be offline-first compatible, enabling the Application to record attendance without requiring an active internet connection and seamlessly sync its changes when the device was re-connected to the internet.
+- _Staff Web Application:_ The Staff Web App was built with the Angular framework and allows Staff Members to manage their class sessions, devices connected to the system and export the attendance data in the CSV format required by the central attendance system that is copied to their clipboard. Google Single Sign On Authentication was integrated into the System to enable Staff Members to use their existing logins.
+- _Student Web Portal:_ The Student Web Portal was also built upon the Angular framework and allows students to record their attendance at class sessions by entering a unique 4-character code that is generated in the Staff Web App and their Student ID number; this then records their attendance at that class session.
+<pre><br/></pre>
+Together these four Sub-Systems enable ease and simplicity of recording attendance. The System then enables staff to easily export the data into the central attendance system.
+
+<img src="/images/das_system_architecture.gif" title="Digital Attendance System Architecture" className="inline-img" />
+
+[Learn more about the Digital Attendance System](https://capstone.weltec.ac.nz/das/)

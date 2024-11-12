@@ -30,6 +30,12 @@ export default function Carousel({ images })
         setCurrentCarouselImage(imgArray[nextImageIndex]);
     }
 
+    // incase there is no images, then just return
+    if(currentCarouselImage == null)
+    {
+        return;
+    }
+
     return (
         <div className="carousel">
             <a className={`modalPrev ${hideArrows ? "btnHidden" : ""}`} onClick={() => changeSlide(-1)}>&#10094;</a>
