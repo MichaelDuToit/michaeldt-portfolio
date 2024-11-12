@@ -8,15 +8,16 @@ export function GeneratePageTitle(page)
 
 export const FooterLinks = [
     {
-        title: "LinkedIn",
-        url: "https://www.linkedin.com/in/michael-du-toit-216404107/"
+        title: "LinkedIn - Michael du Toit",
+        url: "https://www.linkedin.com/in/michael-du-toit-216404107/",
+
     },
     {
-        title: "GitHub - MichaelDuToit",
+        title: "GitHub - Michael du Toit",
         url: "https://github.com/michaeldutoit"
     },
     {
-        title: "CodePen",
+        title: "CodePen - Michaeldt",
         url: "https://codepen.io/Michaeldt/"
     }
 ]

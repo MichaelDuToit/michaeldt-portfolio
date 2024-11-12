@@ -7,10 +7,11 @@ export default function App({ Component, pageProps }) {
 
   const useLandingPageNavigationBarStyle = Component.useLandingPageNavigationBarStyle ?? false;
 
-  return (<>
+  return (
+    <div className="page">
       <NavigationBar useLandingPageNavigationBarStyle={useLandingPageNavigationBarStyle} />
       <Component {...pageProps} />
       <Footer />
-    </>
+    </div>
     );
 }

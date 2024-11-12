@@ -1,4 +1,4 @@
-import { FooterLinks } from "@/configuration/globals";
+import { FooterLinks, GenerateLinkTitle } from "@/configuration/globals";
 
 export default function Footer()
 {
@@ -6,7 +6,7 @@ export default function Footer()
         <footer>
                 {
                     FooterLinks.map(f => (
-                            <a key={f.url} href={f.url}>{f.title}</a>
+                            <a key={f.url} href={f.url} title={f.title}>{f.title}</a>
                     ))
                 }
         </footer>
