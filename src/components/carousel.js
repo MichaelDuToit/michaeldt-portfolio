@@ -14,7 +14,7 @@ export default function Carousel({ images })
 
     function changeSlide(direction)
     {
-        let nextImageIndex = currentImageIndex - direction;
+        let nextImageIndex = currentImageIndex + direction;
         const maxImageIndex = imgArray.length - 1;
 
         if(nextImageIndex < 0)
