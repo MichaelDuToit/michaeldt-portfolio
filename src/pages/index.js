@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getProjects } from '@/configuration/markdown-utils';
 import ProjectCard from '@/components/projectCard';
+import { SkillsList } from '@/configuration/globals';
 
 Home.useLandingPageNavigationBarStyle = true;
 
@@ -42,7 +43,18 @@ export default function Home({ projects }) {
             }
             </ul>
             <Link href="/projects" className='center-text mt-2'>See More....</Link>
-          </section>          
+          </section>       
+          <section className='viewSection'>
+            <h3 className='center-text mb-1'>Skills</h3>
+            <p className='center-text mb-1'>Experienced in a diverse range of technologies and skills, highlighted by hands-on practice and continuous learning</p>
+            <ul className='skillsContainer'>
+              {
+                SkillsList.map((s) => (
+                  <li key={s}>{s}</li>
+                ))
+              }
+            </ul>
+          </section>   
         </main>
       </div>
     </>

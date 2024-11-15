@@ -20,4 +20,18 @@ export const FooterLinks = [
         title: "CodePen - Michaeldt",
         url: "https://codepen.io/Michaeldt/"
     }
+];
+
+export const SkillsList = [
+    "C#",
+    "T-SQL",
+    "JavaScript",
+    "ReactJS",
+    "HTML5",
+    "Git",
+    "CSS",
+    "Service Workers",
+    "SCSS / SASS",
+    "WinForms",
+    "Azure DevOps"
 ]

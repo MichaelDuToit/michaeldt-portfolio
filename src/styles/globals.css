@@ -85,6 +85,24 @@ nav
   width: 100%;
 }
 
+ul.skillsContainer
+{
+  display: grid;
+  row-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 100%));
+  justify-items: stretch;
+
+    width: 100%;
+    li {
+      display: inline;
+      padding:0.5rem 1rem;
+      margin: 0 1rem;
+      text-align: center;
+      background-color: #cecece;
+      color: #1f66e5;
+    }
+}
+
 .projectCardContainer
 {
   display: grid;
@@ -294,7 +312,10 @@ nav
   background-size: 450% 100%;
   position: relative;
 }
-
+.mb-1
+{
+  margin-bottom: 1rem;
+}
 .mb-2
 {
   margin-bottom: 2rem;
@@ -395,6 +416,10 @@ footer
     grid-template-columns: repeat(auto-fit, minmax(15rem, 50%)); 
   }
 
+  ul.skillsContainer
+  {
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  }
 }
 
 @media (min-width: 950px) 
@@ -403,6 +428,11 @@ footer
   {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); 
   }  
+
+  ul.skillsContainer
+  {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  }
 }
 
 @media (max-width: 350px)
