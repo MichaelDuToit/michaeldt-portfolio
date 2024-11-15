@@ -87,18 +87,16 @@ nav
 
 .projectCardContainer
 {
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 100%));
+  justify-items: stretch;
 }
 
 .projectCard
 {
   display: flex;
   list-style-type: none;
-  min-width: 15rem;
-  flex-grow: 1;
   min-height: 15rem;
   position: relative;
   transition: all .3s ease-in-out;
@@ -134,6 +132,8 @@ nav
     position: relative;
     text-shadow: 0px 0px 0.75rem #000;
     color: white;
+    padding: 0 1rem;
+
     &.borderHoverEffect::after
     {
       transition-delay: 0.15s;
@@ -385,4 +385,18 @@ footer
   {
     animation-duration: 10s;
   }
+
+  .projectCardContainer
+  {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 50%)); 
+  }
+
+}
+
+@media (min-width: 950px) 
+{
+  .projectCardContainer 
+  {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); 
+  }  
 }
