@@ -1,4 +1,5 @@
 import { useState } from "react";
+// TODO: something with the carousel.
 
 export default function Carousel({ images })
 {

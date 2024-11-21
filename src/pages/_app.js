@@ -1,6 +1,6 @@
 import Footer from '@/components/footer';
 import NavigationBar from '@/components/navigationBar';
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
 import Link from 'next/link'
 
 export default function App({ Component, pageProps }) {

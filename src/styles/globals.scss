@@ -1,3 +1,20 @@
+// Colors
+$primary_blue: #1f66e5;
+$secondary_blue: #1fc9e5;
+$background_pink: #e51fc9;
+$icon_blue: #5b95dc;
+$light: #fff;
+$dark: #000;
+$gray: #483d48;
+
+@mixin fullWidth
+{
+  width:100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+// Styles
 * {
   box-sizing: border-box;
   padding: 0;
@@ -23,14 +40,14 @@ a {
 nav
 {
   display: flex;
-  width: 100%;
   flex-direction: row;
   justify-content: flex-end;
+  @include fullWidth;
   position: absolute;
   top:0;
   right: 0;
   z-index: 100;
-  color: white;
+  color: $light;
   align-items: center;
 
   ul 
@@ -50,7 +67,7 @@ nav
       {
         font-weight: bold;
         font-size: 1.15rem;
-        color: white;
+        color: $light;
       }
     }
   }
@@ -96,14 +113,14 @@ ul.skillsContainer
   list-style-type: none;
   li {
     display: flex;
-    padding:0.5rem 1rem;
+    padding: 0.5rem 1rem;
     margin: 0 1rem;
     font-weight: bold;
     text-align: center;
-    background-color: #5b95dc;
-    color: #fff;
+    background-color: $icon_blue;
+    color: $light;
     border-radius: 10rem;
-    box-shadow: #5b95dc 0px 0px 8px;
+    box-shadow: $icon_blue 0px 0px 8px;
     justify-content: center;
     align-items: center;
     &:hover, &:focus {
@@ -163,8 +180,8 @@ ul.skillsContainer
     align-items: center;
     text-decoration: none;
     position: relative;
-    text-shadow: 0px 0px 0.75rem #000;
-    color: white;
+    text-shadow: 0px 0px 0.75rem $dark;
+    color: $light;
 
     &.borderHoverEffect::after
     {
@@ -180,7 +197,7 @@ ul.skillsContainer
     filter: blur(0);
     transition: .3s ease-in-out;
     min-width: 100%;
-    width: 100%;
+    @include fullWidth;
     min-height: 100%;
     height: 100%;
     background-size: cover;
@@ -210,7 +227,7 @@ ul.skillsContainer
 
   .borderHoverEffect::after
   {
-    background-color: #fff;
+    background-color: $light;
     bottom: -7px;
     content: "";
     width: 0;
@@ -231,8 +248,8 @@ ul.skillsContainer
   -ms-flex-line-pack: center;
   -ms-flex-pack: center;
   align-content: center;
-  border-bottom: 2px solid #483d48;
-  color: #fff;
+  border-bottom: 2px solid $gray;
+  color: $light;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -286,7 +303,7 @@ ul.skillsContainer
   margin-top: 2%;
   a 
   {
-    color: #1f66e5;
+    color: $primary_blue;
   }
   p {
     padding: 0.3rem 0rem;
@@ -316,8 +333,8 @@ ul.skillsContainer
   -webkit-animation: backgroundAnimation 6s ease-in-out infinite;
   animation: backgroundAnimation 6s ease-in-out infinite;
   animation-duration: 6s;
-  background: #1f66e5;
-  background: linear-gradient(-45deg,#1f66e5,#1fc9e5,#e51fc9,#1fc9e5,#1f66e5);
+  background: $primary_blue;
+  background: linear-gradient(-45deg, $primary_blue, $secondary_blue, $background_pink, $secondary_blue, $primary_blue);
   background-size: auto;
   background-size: 450% 100%;
   position: relative;
@@ -339,9 +356,7 @@ ul.skillsContainer
 .carousel
 {
   display: flex;
-  min-width: 100%;
-  width: 100%;
-  max-width: 100%;
+  @include fullWidth;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -356,7 +371,7 @@ ul.skillsContainer
 
   a
   {
-    color: white;
+    color: $light;
     font-size: 4rem;
     cursor: pointer;
     align-self: center;
@@ -379,7 +394,7 @@ footer
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  @include fullWidth;
   padding: 3% 1%;
   align-self: flex-end;
 
