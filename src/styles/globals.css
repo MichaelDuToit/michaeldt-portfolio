@@ -106,7 +106,7 @@ ul.skillsContainer
     box-shadow: #5b95dc 0px 0px 8px;
     justify-content: center;
     align-items: center;
-    &:hover {
+    &:hover, &:focus {
       animation: shaking 0.75s;
       animation-iteration-count: infinite;
     }
@@ -187,13 +187,13 @@ ul.skillsContainer
     background-position: center;
   }
 
-  &:hover .img
+  &:hover .img, &:focus .img
   {
     filter: blur(5px);
     opacity: 0.3;
   }
 
-  &:hover .overlayRoot
+  &:hover .overlayRoot, &:hover .overlayRoot
   {
     & h4
     {
@@ -220,7 +220,7 @@ ul.skillsContainer
     transition: width .2s;
   }
   
-  &:hover .borderHoverEffect::after
+  &:hover .borderHoverEffect::after, &:focus .borderHoverEffect::after
   {
     width: 100%;
   }
