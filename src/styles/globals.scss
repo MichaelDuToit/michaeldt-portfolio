@@ -2,7 +2,6 @@
 $primary_blue: #1f66e5;
 $secondary_blue: #1fc9e5;
 $background_pink: #e51fc9;
-$icon_blue: #5b95dc;
 $light: #fff;
 $dark: #000;
 $gray: #483d48;
@@ -117,10 +116,10 @@ ul.skillsContainer
     margin: 0 1rem;
     font-weight: bold;
     text-align: center;
-    background-color: $icon_blue;
+    background-color: $primary_blue;
     color: $light;
     border-radius: 10rem;
-    box-shadow: $icon_blue 0px 0px 8px;
+    box-shadow: $primary_blue 0px 0px 8px;
     justify-content: center;
     align-items: center;
     &:hover, &:focus {
