@@ -21,7 +21,7 @@ export default function ProjectCard({ project })
 export function ProjectImage({project})
 {
   // TODO: save local fallback image.
-  const fallbackImage = "https://images.pexels.com/photos/5483069/pexels-photo-5483069.jpeg";
+  const fallbackImage = "/images/projectCardFallbackImage.jpeg";
   const imagePath = project.images != null || project.images != undefined ? `/images/${project.images[0]}` : fallbackImage;
 
   return (
