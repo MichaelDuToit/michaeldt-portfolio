@@ -20,7 +20,6 @@ export default function ProjectCard({ project })
 
 export function ProjectImage({project})
 {
-  // TODO: save local fallback image.
   const fallbackImage = "/images/projectCardFallbackImage.jpeg";
   const imagePath = project.images != null || project.images != undefined ? `/images/${project.images[0]}` : fallbackImage;
 

@@ -1,3 +1,6 @@
+// Imports
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
 // Colors
 $primary_blue: #1f66e5;
 $secondary_blue: #1fc9e5;
@@ -6,6 +9,7 @@ $light: #fff;
 $dark: #000;
 $gray: #483d48;
 
+// Mixins
 @mixin fullWidth
 {
   width:100%;
@@ -352,38 +356,6 @@ ul.skillsContainer
   margin-top: 2rem;
 }
 
-.carousel
-{
-  display: flex;
-  @include fullWidth;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
-
-  img {
-    max-width: 100%;
-    max-height: 22rem;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-  }
-
-  a
-  {
-    color: $light;
-    font-size: 4rem;
-    cursor: pointer;
-    align-self: center;
-    min-height: 100%;
-  }
-
-  .btnHidden
-  {
-    visibility: collapse !important;
-  }
-
-}
-
 footer
 {
   position: relative;
@@ -402,6 +374,33 @@ footer
   }
 }
 
+// Import Overrides
+.alice-carousel
+{
+  .alice-carousel__stage-item
+  {
+    text-align: center;
+  }
+
+  .alice-carousel__dots-item
+  {
+    background-color: $primary_blue;
+    &.__active
+    {
+      background-color: $background_pink;
+    }
+  }
+
+  .item-inner
+  {
+    width: auto;
+    max-width: 90%;
+    max-height: 33rem;
+  }
+
+}
+
+// Animation Key Frames
 @keyframes backgroundAnimation {
   0%,
   to {
