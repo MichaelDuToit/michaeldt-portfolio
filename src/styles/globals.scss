@@ -363,7 +363,7 @@ footer
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   @include fullWidth;
   padding: 3% 1%;
@@ -371,6 +371,21 @@ footer
 
   a {
     margin: 0 0.75rem;
+  }
+
+  div
+  {
+    display: flex;
+    flex-direction: row;
+    margin: 0.33rem 0rem;
+  }
+
+  .buildStatus
+  {
+    span 
+    {
+      padding-right: 0.25rem;
+    }
   }
 }
 
