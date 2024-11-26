@@ -26,7 +26,7 @@ export default function Home({ projects }) {
         </div>
         <main>
           <section className='viewSection'>
-            <h3>Hi! I'm Michael!</h3>
+            <h3>Hi! I&apos;m Michael!</h3>
             <p>I am a Full Stack Developer who enjoys working across all technologies and platforms. Currently located in Wellington, New Zealand.<br/>         
             </p>
           </section>

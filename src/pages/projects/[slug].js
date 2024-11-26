@@ -10,7 +10,7 @@ export default function Project({ content, bodyContent })
     const handleDragStart = (e) => e.preventDefault();
 
     const imgArray = content.images.map((img) => (
-        <img src={`/images/${img}`} onDragStart={handleDragStart} className="item-inner" role="presentation" />
+        <img key={img} src={`/images/${img}`} onDragStart={handleDragStart} className="item-inner" role="presentation" />
     ));
 
     const config = {
