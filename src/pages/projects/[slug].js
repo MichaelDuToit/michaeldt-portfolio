@@ -28,12 +28,14 @@ export default function Project({ content, bodyContent })
             </Head>
             <div className="projectContent viewSection">
                 <AliceCarousel 
+                    activeIndex={0}
                     mouseTracking 
                     disableButtonsControls
                     autoHeight
                     items={imgArray} 
                     controlsStrategy="alternate"
                     responsive={config}
+                    onInitialized={(e) => e.activeIndex = 0}
                 />
                 <h3>{content.title}</h3>
                 <MDXRemote {...bodyContent} />
