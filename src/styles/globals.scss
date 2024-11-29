@@ -368,6 +368,7 @@ footer
   @include fullWidth;
   padding: 3% 1%;
   align-self: flex-end;
+  text-align: center;
 
   a {
     margin: 0 0.75rem;
@@ -376,7 +377,7 @@ footer
   div
   {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0.33rem 0rem;
   }
 
@@ -392,11 +393,13 @@ footer
 // Import Overrides
 .alice-carousel
 {
+  margin-top: 2%;
   .alice-carousel__stage-item
   {
     text-align: center;
+    width: 100%;
+    max-height: 33rem;
   }
-
   .alice-carousel__dots-item
   {
     background-color: $primary_blue;
@@ -409,7 +412,7 @@ footer
   .item-inner
   {
     width: auto;
-    max-width: 90%;
+    max-width: 100%;
     max-height: 33rem;
   }
 
@@ -471,6 +474,14 @@ footer
   ul.skillsContainer
   {
     grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  }
+
+  footer
+  {
+    div 
+    {
+      flex-direction: row;
+    }
   }
 }
 
