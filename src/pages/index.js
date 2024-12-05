@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { getProjects } from '@/configuration/markdown-utils';
 import ProjectCard from '@/components/projectCard';
-import { SkillsList } from '@/configuration/globals';
+import { SkillsList } from '@/configuration/general-config';
+import { OrderProjects } from '@/components/helpers';
 
 Home.useLandingPageNavigationBarStyle = true;
 
@@ -34,7 +35,7 @@ export default function Home({ projects }) {
             <h3 className='center-text mb-2'>Featured Projects:</h3>
             <ul className="projectCardContainer">
             {
-                projects.sort((a, b) => orderProjects(a, b)).map((project) => (
+                projects.map((project) => (
                       <ProjectCard key={project.page}
                         url={`/projects/${project.page}`} 
                         project={project}
@@ -65,38 +66,7 @@ export function getStaticProps()
 {
     let projects = getProjects();
     // order the projects and then limit to top 4 for the home page
-    projects = projects.sort((a, b) => orderProjects(a, b)).slice(0, 4);
+    projects = projects.sort((a, b) => OrderProjects(a, b)).slice(0, 4);
 
     return { props: { projects }}
-}
-
-export function orderProjects(a, b)
-{
-  function getComparer(a, b)
-  {
-    if(a < b)
-    {
-      return -1;
-    }
-    
-    if(a > b)
-    {
-      return 1;
-    }    
-
-    return 0;
-  }
-
-  // first we order by the SortOrder meta data.
-  let index = getComparer(a.sortOrder, b.sortOrder);
-
-  // if we didn't have a duplication then return
-  if(index != 0)
-  { 
-    return index;
-  }
-
-  // otherwise they have the same SortOrder, so sort alphabetically by the title instead.
-  return getComparer(a.title.toUpperCase(), b.title.toUpperCase())
-
 }

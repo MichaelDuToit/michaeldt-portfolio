@@ -1,4 +1,4 @@
-import { FooterLinks, GenerateLinkTitle, NETLIFY_BUILD_STATUS } from "@/configuration/globals";
+import { FooterLinks, GenerateLinkTitle, NETLIFY_BUILD_STATUS } from "@/configuration/general-config";
 
 export default function Footer()
 {

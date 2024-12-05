@@ -1,4 +1,4 @@
-import { GeneratePageTitle } from "@/configuration/globals";
+import { GeneratePageTitle } from "@/configuration/general-config";
 import { getProjectData, projectsContentPaths } from "@/configuration/markdown-utils"
 import { MDXRemote } from "next-mdx-remote";
 import {serialize} from 'next-mdx-remote/serialize';

@@ -25,7 +25,5 @@ export function ProjectImage({project})
 
   return (
     <div className='img' style={{backgroundImage:`url(${imagePath})`}} />
-  );
-
-  
+  ); 
 }
