@@ -18,13 +18,13 @@ export default function Project({ content, bodyContent })
     }
 
     const imgArray = content.images.map((img) => (
-        <img key={img} src={`/images/${img}`} onDragStart={(e) => e.preventDefault()} className="item-inner" role="presentation" />
+        <img key={img} src={`/images/${img}`} onDragStart={(e) => e.preventDefault()} className="item-inner" alt={img} />
     ));
 
     // using an effect to cause the carousel to be hydrated once the page is loaded.
     useEffect(() => {
         setInitialIndex(0);
-    });
+    }, []);
 
     return (
         <>

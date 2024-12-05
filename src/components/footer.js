@@ -12,7 +12,7 @@ export default function Footer()
                 }
             </div>
             <div className="buildStatus">
-                <span>Build Status</span><img src={NETLIFY_BUILD_STATUS} />
+                <span>Build Status</span><img src={NETLIFY_BUILD_STATUS} atl="Build Status on Netlify" />
             </div>
         </footer>
     )
