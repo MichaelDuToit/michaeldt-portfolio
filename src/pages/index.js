@@ -20,7 +20,7 @@ export default function Home({ projects }) {
         <div className="landingSplash splashAnimation">
           <h2 className='header'>Michael du Toit</h2>
           <h3>Full Stack Developer</h3>
-          <div className="arrowContainer">
+          <div className="arrowContainer" onClick={scrollDownToNextSection}>
             <p className='downArrow'>&#10095;</p>
             <p className='downArrow'>&#10095;</p>
           </div>
@@ -60,6 +60,16 @@ export default function Home({ projects }) {
       </div>
     </>
   )
+}
+
+function scrollDownToNextSection()
+{
+  // scroll to the bottom of the splash.
+  window.scrollTo({
+    top: window.innerHeight - 15,
+    left: 0,
+    behavior: "smooth"
+  })
 }
 
 export function getStaticProps()
