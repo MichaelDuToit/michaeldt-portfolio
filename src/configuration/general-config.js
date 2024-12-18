@@ -1,6 +1,6 @@
 
 export const APPLICATION_NAME = "Michael du Toit"
-export const NETLIFY_BUILD_STATUS = "https://api.netlify.com/api/v1/badges/d08c5e15-5501-408d-a744-424fd029f59c/deploy-status";
+export const NETLIFY_BUILD_STATUS = "https://api.netlify.com/api/v1/badges/7da2abeb-eaa6-4f7b-bf6c-d5d6fbf2e57c/deploy-status";
 
 export function GeneratePageTitle(page)
 {
